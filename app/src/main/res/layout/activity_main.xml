@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/mainContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioGroup
+            android:id="@+id/navBottom"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RadioButton
+                android:id="@+id/rb_okex"
+                style="@style/bottombuttonstyle"
+                android:drawableTop="@drawable/okex_icon_selector"
+
+                android:text="OkEx" />
+
+            <RadioButton
+                android:id="@+id/rb_market"
+                style="@style/bottombuttonstyle"
+                android:drawableTop="@drawable/ic_config"
+                android:text="行情" />
+
+            <RadioButton
+                android:id="@+id/rb_curreny"
+                style="@style/bottombuttonstyle"
+                android:drawableTop="@drawable/ic_config"
+                android:text="法币" />
+
+            <RadioButton
+                android:id="@+id/rb_c2c"
+                style="@style/bottombuttonstyle"
+                android:drawableTop="@drawable/ic_config"
+                android:text="币币" />
+
+            <RadioButton
+                android:id="@+id/rb_contract"
+                style="@style/bottombuttonstyle"
+                android:drawableTop="@drawable/ic_config"
+                android:text="合约" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
